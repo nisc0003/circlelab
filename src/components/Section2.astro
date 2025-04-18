@@ -4,12 +4,12 @@
 
 <article>
   <section class="section_connection">
-    <div class="">
-      <div>
+    <div class="grid-container">
+      <div class="center">
         <h4>Material Connextion</h4>
         <h5>Filosofien bag konceptet</h5>
       </div>
-      <div>
+      <div class="box produktion">
         <h3>Produktion Af Produkter</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -18,7 +18,7 @@
         </p>
         <!-- cta -->
       </div>
-      <div>
+      <div class="box salg">
         <h3>Salg Og Marketing</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,7 +26,7 @@
           minim veniam.
         </p>
       </div>
-      <div>
+      <div class="box forbrug">
         <h3>Forbrug Og Slid Af Materialerne</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,7 +34,7 @@
           minim veniam.
         </p>
       </div>
-      <div>
+      <div class="box materialer">
         <h3>Materialerne Genanvendes</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -50,5 +50,68 @@
     padding-right: 60px;
     padding-left: 60px;
     background: #73c3ac;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 200px;
+    row-gap: 100px;
+    padding: 40px;
+    justify-items: center;
+    /* background: tbd */
+  }
+
+  .box {
+    padding: 20px;
+    background: #e0fff6;
+    border-radius: 53px;
+    text-align: center;
+    text-wrap: balance;
+    /* height: 300px; */
+    place-content: center;
+  }
+
+  .produktion {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    text-align: start;
+    align-content: start;
+  }
+
+  .salg {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-content: start;
+  }
+
+  .materialer {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+    text-align: start;
+    align-content: start;
+  }
+
+  .forbrug {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+    align-content: start;
+  }
+
+  .center {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    background: #3c8e76;
+    padding: 80px 20px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+  }
+
+  .center h4,
+  h5 {
+    color: #f2f2f2;
   }
 </style>
