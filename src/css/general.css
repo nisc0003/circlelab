@@ -10,3 +10,73 @@ img {
   height: auto;
   display: block;
 }
+
+:root {
+  --primary: #ff671f;
+  --secondary: #003b5c;
+  --tertiary: #73c3ac;
+  --quinary: #ffebe1;
+  --txtcolor: #1a1a1a;
+  --txtcolor2: #ffffff;
+}
+
+h1 {
+  font-size: 20rem;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  color: var(--secondary);
+  cursor: default;
+  line-break: auto;
+}
+h2 {
+  font-size: 60px;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  color: var(--secondary);
+  cursor: default;
+}
+h3 {
+  font-size: 3rem;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  color: var(--txtcolor);
+  cursor: default;
+}
+h4 {
+  font-size: 2rem;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  color: var(--txtcolor);
+  cursor: default;
+}
+h5 {
+  font-size: 1.25rem;
+  font-family: "Roboto", serif;
+  font-weight: bold;
+  color: var(--txtcolor);
+  cursor: default;
+}
+p {
+  font-size: 24px;
+  font-family: "Roboto", serif;
+  color: var(--secondary);
+  cursor: default;
+  margin-bottom: 20px;
+}
+a,
+li {
+  font-size: 24px;
+  font-family: "Roboto", serif;
+  color: var(--secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}

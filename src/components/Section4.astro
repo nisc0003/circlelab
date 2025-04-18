@@ -1,0 +1,74 @@
+---
+
+---
+
+<article>
+  <section class="section_box">
+    <div class="grid_18-1-16">
+      <div class="events_box1">
+        <h4>The Box</h4>
+        <p>
+          Materialer skal opleves og røres, derfor er Boksen en stor
+          kontinuerlig walk-in Boks, der indeholder en samling af råmaterialer
+          og giver et indblik i, hvordan et materiale ser ud, følelsen og
+          lugten; før, under og efter det indgår i en proces.
+        </p>
+        <p>
+          Du kan udforske råmaterialer, som er anvendt i kompositmaterialer;
+          bliv inspireret af hvordan naturen bygger og se andre studerendes
+          projekter i kassen med skiftende udstillinger.
+        </p>
+        <p>
+          Find Boksen imellem bøgerne på KEA Bibliotek på Campus Guldbergsgade.
+        </p>
+        <p>
+          Som underviser kan du låne processer og materialekasser fra Boksen til
+          din undervisning. Dette lånes gennem Tech & Story Lab eller kontakt
+          Nikolaj Storm Hauge Tost på nito@kea.dk
+        </p>
+      </div>
+      <div class="events_box2">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+          alt=""
+          class="events_img"
+        />
+        <!-- cta -->
+      </div>
+    </div>
+  </section>
+</article>
+
+<style>
+  .section_box {
+    padding: 60px;
+    background: #1266b0;
+  }
+
+  .grid_18-1-16 {
+    display: grid;
+    grid-template-columns: 18fr 1fr 16fr;
+    grid-template-rows: 1fr;
+  }
+  .events_box1 {
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 2;
+  }
+
+  .events_box2 {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    z-index: 1;
+    align-self: top;
+  }
+
+  .events_img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+</style>
