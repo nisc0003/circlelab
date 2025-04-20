@@ -23,7 +23,7 @@ import hero from "../images/Hero.svg";
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr;
-    background-color: #ffebe1;
+    background-color: var(--quinary);
     padding-top: 50px;
     padding-bottom: 20px;
   }
@@ -45,11 +45,11 @@ import hero from "../images/Hero.svg";
     z-index: 2;
     grid-column: 1 / span 2;
     grid-row: 1;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .hero_h1 {
-    font-size: clamp(1rem, 16rem, 20rem);
+    font-size: clamp(1rem, 14vw, 20rem);
     display: flex;
     flex-direction: column;
     width: min-content;
@@ -62,7 +62,7 @@ import hero from "../images/Hero.svg";
   }
 
   .hero_h1 span:nth-child(2) {
-    margin-left: 80px;
+    margin-left: 6vw;
   }
 
   .hero_bottom {
