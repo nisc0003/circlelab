@@ -14,14 +14,17 @@ img {
 :root {
   --primary: #ff671f;
   --secondary: #003b5c;
-  --tertiary: #73c3ac;
+  --tertiary: #e0fff6;
+  --quaternary: #5dc4e5;
   --quinary: #ffebe1;
+  --section1: #def7ff;
+  --section2: #73c3ac;
   --txtcolor: #1a1a1a;
   --txtcolor2: #ffffff;
 }
 
 h1 {
-  font-size: 20rem;
+  font-size: 5rem;
   font-family: "Roboto", serif;
   font-weight: bold;
   color: var(--secondary);
@@ -29,7 +32,7 @@ h1 {
   line-break: auto;
 }
 h2 {
-  font-size: 60px;
+  font-size: 4rem;
   font-family: "Roboto", serif;
   font-weight: bold;
   color: var(--secondary);
@@ -43,21 +46,21 @@ h3 {
   cursor: default;
 }
 h4 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-family: "Roboto", serif;
   font-weight: bold;
   color: var(--txtcolor);
   cursor: default;
 }
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: "Roboto", serif;
   font-weight: bold;
   color: var(--txtcolor);
   cursor: default;
 }
 p {
-  font-size: 24px;
+  font-size: 1.25rem;
   font-family: "Roboto", serif;
   color: var(--secondary);
   cursor: default;
@@ -79,4 +82,10 @@ li {
 .flexcol {
   display: flex;
   flex-direction: column;
+}
+
+button {
+  background: none;
+  border-radius: 100%;
+  border: none;
 }

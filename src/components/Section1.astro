@@ -1,6 +1,9 @@
 ---
-import "../images/lab.svg";
-import "../images/Hero.svg";
+import labsvg from "../images/lab.svg";
+import chat from "../images/chatbutton.png";
+import exclamation from "../images/exclamationbutton.png";
+import flag from "../images/flagbutton.png";
+import labimg from "../images/rectangle_20.png";
 ---
 
 <article>
@@ -8,17 +11,25 @@ import "../images/Hero.svg";
     <div class="grid_3-4">
       <div class="lab_container1">
         <h2>Circular Material</h2>
-        <img src="../images/Rectangle 20.png" alt="" class="material_img" />
+        <img
+          src={labimg.src}
+          alt="billede af cirkular lab"
+          class="material_img"
+        />
       </div>
       <div class="lab_container2">
-        <img src="../images//lab.svg" alt="" class="lab_img" />
+        <img
+          src={labsvg.src}
+          alt="baggrundsillustration der skriver lab ud i store bogstaver"
+          class="lab_img"
+        />
         <div class="lab_text">
           <p>
             I Circular Material Lab, er der plads og rum for at udforske,
             eksperimentere og arbejde med materialer i alle afskygninger.
           </p>
           <p>
-            fokus på bæredygtighed og cirkulær økonomi og arbejder med
+            Vi har fokus på bæredygtighed og cirkulær økonomi og arbejder med
             materialerne med dette for øje. Det er alt fra tang, bioplastik og
             bakterier, til hvordan man forlænger levetiden på eksisterende
             materialer i produkter, såsom oliebaseret plastik, tekstiler og
@@ -31,8 +42,8 @@ import "../images/Hero.svg";
         </div>
       </div>
     </div>
-    <div class="grid_info">
-      <div class="subgrid">
+    <div class="col_info">
+      <div class="textgrid">
         <p>Du kan komme ind i labbet ved brug af dit studiekort.</p>
         <p>
           For at bruge Circular Material Lab skal du være studerende på KEA og
@@ -45,82 +56,110 @@ import "../images/Hero.svg";
           kontakte os på material@kea.dk
         </p>
       </div>
-      <div class="subgrid">
-        <img src="../images/Group 63.svg" alt="" />
-        <img src="../images/Group 63.svg" alt="" />
-        <img src="../images/Group 63.svg" alt="" />
+      <div class="grid button_grid">
+        <button class="cta1 cta_exclamation">
+          <img src={exclamation.src} alt="knap" /></button
+        >
+        <button class="cta1 cta_flag">
+          <img src={flag.src} alt="knap" /></button
+        >
+        <button class="cta1 cta_chat">
+          <img src={chat.src} alt="knap" /></button
+        >
       </div>
     </div>
   </section>
+
+  <style>
+    .section_material {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: 50px;
+      flex-wrap: wrap;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 80px;
+      background-color: var(--section1);
+    }
+    .grid_3-4 {
+      display: grid;
+      grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+      gap: 20px;
+      align-items: end;
+    }
+
+    .lab_container2 {
+      display: grid;
+      grid-row: 1fr;
+      grid-row: 2fr 3fr 2fr;
+    }
+
+    .lab_img {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+      height: 100%;
+    }
+
+    .lab_text {
+      display: grid;
+      background-color: var(--section1);
+      grid-column: 1;
+      grid-row: 2;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      gap: 20px;
+    }
+
+    .lab_text > * {
+      margin: 0px;
+    }
+
+    .lab_text p:last-of-type {
+      padding-top: 20px;
+    }
+
+    /* Main container styling */
+    .section_info {
+      padding: 50px;
+      border-radius: 53px;
+    }
+
+    /* Grid box setup */
+    .col_info {
+      display: flex;
+      gap: 60px;
+      align-items: stretch;
+      background: var(--quaternary);
+      padding: 40px;
+      border-radius: 50px;
+    }
+
+    /* Text subgrid */
+
+    .textgrid {
+      display: grid;
+      gap: 0px;
+      margin: none;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .textgrid > * {
+      font-size: 1.5rem;
+      margin: 0px;
+      align-content: center;
+    }
+
+    /* Button subgrid */
+    .grid:last-child {
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      gap: 15px;
+      align-content: center;
+    }
+
+    .button_grid {
+      min-width: 6vw;
+    }
+  </style>
 </article>
-
-<style>
-  .section_material {
-    display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 50px;
-    flex-wrap: wrap;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-bottom: 80px;
-  }
-  .grid_3-4 {
-    display: grid;
-    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
-    gap: 20px;
-    align-items: end;
-  }
-
-  .lab_container2 {
-    display: grid;
-    grid-row: 1fr;
-    grid-row: 2fr 3fr 2fr;
-  }
-
-  .lab_img {
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    height: 100%;
-  }
-
-  .lab_text {
-    background-color: white;
-    grid-column: 1;
-    grid-row: 2;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-
-  /* Main container styling */
-  .section_info {
-    padding: 50px;
-    border-radius: 53px;
-  }
-
-  /* Grid box setup */
-  .grid_info {
-    display: grid;
-    grid-template-columns: 12fr 1fr;
-    gap: 30px;
-    align-items: stretch;
-    background: #5dc4e5;
-    padding: 30px;
-    border-radius: 50px;
-  }
-
-  /* Text subgrid */
-  .subgrid:first-child {
-    display: grid;
-    gap: 30px;
-    align-content: center;
-  }
-
-  /* Button subgrid */
-  .subgrid:last-child {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    gap: 15px;
-    align-content: center;
-  }
-</style>
