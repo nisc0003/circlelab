@@ -1,24 +1,18 @@
 ---
-import "../images/flower.svg";
-import "../images/Hero.svg";
+import flower from "../images/flower.svg";
+import hero from "../images/Hero.svg";
 ---
 
 <article>
   <section class="section_hero">
     <div class="hero">
-      <img
-        src="../images/Hero.svg"
-        alt="hero_background"
-        class="hero_background"
-      />
+      <img src={hero.src} alt="hero background" class="hero_background" />
       <div class="grid_hero">
-        <!-- baggrund -->
         <h1 class="hero_h1">
           <span>Circular</span>
           <span>Lab</span>
         </h1>
-        <!-- blomster -->
-        <img src="../images/flower.svg" alt="blomster" class="hero_flowers" />
+        <img src={flower.src} alt="blomster" class="hero_flowers" />
       </div>
     </div>
   </section>
