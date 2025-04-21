@@ -1,9 +1,9 @@
 ---
 import labsvg from "../images/lab.svg";
-import chat from "../images/chatbutton.png";
-import exclamation from "../images/exclamationbutton.png";
-import flag from "../images/flagbutton.png";
-import labimg from "../images/rectangle_20.png";
+import chat from "../images/chatbutton.svg";
+import exclamation from "../images/exclamationbutton.svg";
+import flag from "../images/flagbutton.svg";
+import labimg from "../images/circularlab.webp";
 ---
 
 <article>
@@ -60,10 +60,10 @@ import labimg from "../images/rectangle_20.png";
         <button class="cta1 cta_exclamation">
           <img src={exclamation.src} alt="knap" /></button
         >
-        <button class="cta1 cta_flag">
+        <button class="cta2 cta_flag">
           <img src={flag.src} alt="knap" /></button
         >
-        <button class="cta1 cta_chat">
+        <button class="cta3 cta_chat">
           <img src={chat.src} alt="knap" /></button
         >
       </div>
@@ -89,9 +89,12 @@ import labimg from "../images/rectangle_20.png";
       align-items: end;
     }
 
+    .material_img {
+      border-radius: 53px;
+    }
+
     .lab_container2 {
       display: grid;
-      grid-row: 2fr 3fr 2fr 1fr;
     }
 
     .lab_img {
@@ -127,21 +130,25 @@ import labimg from "../images/rectangle_20.png";
     /* Grid box setup */
     .col_info {
       display: flex;
-      gap: 60px;
+      gap: 4vw;
       align-items: stretch;
       background: var(--quaternary);
-      padding: 40px;
+      padding: 2vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
       border-radius: 50px;
+      width: 100%;
     }
 
     /* Text subgrid */
 
     .textgrid {
       display: grid;
-      gap: 0px;
+      gap: 2vw;
       margin: none;
       padding-top: 15px;
       padding-bottom: 15px;
+      place-self: center;
     }
     .textgrid > * {
       font-size: 1.5rem;
@@ -158,7 +165,10 @@ import labimg from "../images/rectangle_20.png";
     }
 
     .button_grid {
-      min-width: 6vw;
+      min-width: 2vw;
+      max-width: 5vw;
+      place-content: right;
+      place-self: center;
     }
   </style>
 </article>

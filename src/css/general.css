@@ -12,7 +12,7 @@ img {
 }
 
 :root {
-  --primary: #ff671f;
+  --primary: #ff7e42;
   --secondary: #003b5c;
   --tertiary: #e0fff6;
   --quaternary: #5dc4e5;
@@ -85,7 +85,11 @@ li {
 }
 
 button {
-  background: none;
+  display: grid;
   border-radius: 100%;
   border: none;
+  background-color: var(--txtcolor2);
+  aspect-ratio: 1/1;
+  padding: 15%;
+  place-content: center;
 }
