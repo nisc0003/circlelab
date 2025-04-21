@@ -1,5 +1,7 @@
 ---
 import "../css/general.css";
+import header from "../images/header.png";
+import footer from "../images/footer.png";
 const { titel } = Astro.props;
 ---
 
@@ -20,9 +22,15 @@ const { titel } = Astro.props;
     />
   </head>
   <body>
+    <header>
+      <img src={header.src} alt="header" />
+    </header>
     <main>
       <slot />
     </main>
+    <footer>
+      <img src={footer.src} alt="footer" />
+    </footer>
   </body>
 </html>
 
