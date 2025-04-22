@@ -61,7 +61,7 @@ h5 {
   cursor: default;
 }
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "Roboto", serif;
   color: var(--secondary);
   cursor: default;
@@ -84,4 +84,29 @@ li {
 .flexcol {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  a,
+  li {
+    font-size: 1.25rem;
+  }
 }
