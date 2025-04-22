@@ -8,6 +8,9 @@ const {
   afholder,
   class: extraClass,
 } = Astro.props;
+
+const { event } = Astro.props;
+console.log("card event:", event);
 ---
 
 <article class={`card ${extraClass ?? ""}`}>
@@ -17,11 +20,11 @@ const {
     <div class="img_backgroud"></div>
   </div>
   <div class="flexcol card_text_box">
-    <h4>{titel}</h4>
-    <p>{beskrivelse}</p>
+    <h4>{event.title}</h4>
+    <p>{event.desc}</p>
     <div class="flex card_info">
       <h5>{afholder}</h5>
-      <h5>{dato}</h5>
+      <h5>{event.date}</h5>
     </div>
   </div>
   <!-- card end -->
