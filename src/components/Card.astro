@@ -1,7 +1,30 @@
 ---
-
+const {
+  titel,
+  beskrivelse,
+  billede,
+  billedebeskrivelse,
+  dato,
+  afholder,
+  class: extraClass,
+} = Astro.props;
 ---
 
-<article></article>
+<article class={`card ${extraClass ?? ""}`}>
+  <!-- card start -->
+  <div class="card_img_box">
+    <img src={billede} alt={billedebeskrivelse} />
+    <div class="img_backgroud"></div>
+  </div>
+  <div class="flexcol card_text_box">
+    <h4>{titel}</h4>
+    <p>{beskrivelse}</p>
+    <div class="flex card_info">
+      <h5>{afholder}</h5>
+      <h5>{dato}</h5>
+    </div>
+  </div>
+  <!-- card end -->
+</article>
 
 <style></style>

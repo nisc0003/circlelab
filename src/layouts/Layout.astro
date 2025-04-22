@@ -1,5 +1,6 @@
 ---
 import "../css/general.css";
+import "../css/card.css";
 import header from "../images/header.png";
 import footer from "../images/footer.png";
 const { titel } = Astro.props;
@@ -13,14 +14,34 @@ const { titel } = Astro.props;
     <title>{titel}</title>
     <!-- <meta name="--navn--" content="--Beskrivende tekst--" /> -->
     <!-- <link rel="icon" href="--billede--" type="image/x-icon" /> -->
-    <link rel="stylesheet" href="../css/general.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <script is:inline>
+      window.addEventListener("load", () => {
+        const carousel = document.querySelector(".cards_layout");
+        const card = document.querySelector(".event_card");
+        const nextbtn = document.querySelector(".right_arrow");
+        const prevbtn = document.querySelector(".left_arrow");
+
+        if (!carousel || !card || !nextbtn || !prevbtn) return;
+
+        const slideWidth = card.clientWidth;
+
+        nextbtn.addEventListener("click", () => {
+          carousel.scrollLeft += slideWidth;
+        });
+
+        prevbtn.addEventListener("click", () => {
+          carousel.scrollLeft -= slideWidth;
+        });
+      });
+    </script></head
+  >
+
   <body>
     <header>
       <img src={header.src} alt="header" />

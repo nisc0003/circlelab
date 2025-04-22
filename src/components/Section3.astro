@@ -1,15 +1,145 @@
 ---
 import Eventcard from "../components/Card.astro";
+import arrowright from "../images/arrow_card_right.svg";
+import arrowleft from "../images/arrow_card_left.svg";
+import img1 from "../images/event1.webp";
+import img2 from "../images/event2.webp";
+import img3 from "../images/event3.webp";
 ---
 
 <article>
   <section class="section_events">
     <h2>Upcomming Events</h2>
     <h3>Med Cirkular Lab</h3>
-    <div class="grid_1-1-1">
-      <Eventcard />
-      <Eventcard />
-      <Eventcard />
+    <div class="cards_container">
+      <button class="card_arrow left_arrow"
+        ><img src={arrowleft.src} alt="gå til venstre" /></button
+      >
+      <div class="cards_layout">
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img1.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img2.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img3.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img1.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img3.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img2.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img1.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img2.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img3.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img1.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img3.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+        <div class="event_card">
+          <Eventcard
+            titel="Repair Cafe"
+            beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
+            billede={img2.src}
+            billedebeskrivelse="billede af ...."
+            afholder="CIRCULAR LAB"
+            dato="9 APRIL KL 14.00"
+          />
+        </div>
+      </div>
+      <button class="card_arrow right_arrow"
+        ><img src={arrowright.src} alt="gå til højre" /></button
+      >
     </div>
   </section>
 </article>
@@ -18,5 +148,32 @@ import Eventcard from "../components/Card.astro";
     padding-right: 60px;
     padding-left: 60px;
     background: var(--primary);
+    padding-bottom: 100px;
+  }
+  .cards_layout {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .event_card {
+    flex: 0 0 auto;
+  }
+
+  .card_img_box {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: 1fr;
+  }
+
+  .card_img_box img {
+    border-radius: 100%;
+    border-bottom-left-radius: 0%;
+    grid-row: 1;
+    z-index: 2;
+    border: solid 8px var(--primary);
+  }
+  .cards_layout {
+    overflow-x: hidden;
   }
 </style>
