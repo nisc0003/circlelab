@@ -13,153 +13,44 @@ const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN2c2JsbmdoeXBvamt3cHlham5tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTMzNjgsImV4cCI6MjA1OTkyOTM2OH0.GjC9pG1mZOeGjvvrBiQOMZR1J9aKpJlSrSYNkjKafQQ";
 
 const options = {
-  headers: {
-    apikey: key,
-  },
+  headers: { apikey: key },
 };
-
 const data = await fetch(url, options).then((res) => res.json());
+const images = [
+  "/src/images/event1.webp",
+  "/src/images/event2.webp",
+  "/src/images/event3.webp",
+];
 ---
 
 <article>
   <section class="section_events">
-    {data.map((event) => <Eventcard event={event} />)}
-  </section>
-
-  <!-- <!-- <section class="section_events"> -->
-  <h2>Upcomming Events</h2>
-  <h3>Med Cirkular Lab</h3>
-  <div class="cards_container">
-    <button class="card_arrow left_arrow"
-      ><img src={arrowleft.src} alt="gå til venstre" /></button
-    >
-    <div class="cards_layout">
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img1.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
+    <h2>Upcomming Events</h2>
+    <h3>Med Cirkular Lab</h3>
+    <div class="cards_container">
+      <button class="card_arrow left_arrow">
+        <img src={arrowleft.src} alt="gå til venstre" />
+      </button>
+      <div class="cards_layout">
+        {
+          data.map((event, index) => (
+            <div class="event_card">
+              <Eventcard
+                event={event}
+                billede={images[index % images.length]}
+                billedebeskrivelse="billede af arrangement"
+                afholder="CIRCULAR LAB"
+              />
+            </div>
+          ))
+        }
       </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img2.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img3.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img1.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img3.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img2.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img1.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img2.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img3.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img1.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img3.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
-      <div class="event_card">
-        <Eventcard
-          titel="Repair Cafe"
-          beskrivelse="Kom med dit gamle tøj og giv det nyt liv!  Er der et hul der har brug for en kærlig hånd, eller sæt et unikt præg på din garderobe."
-          billede={img2.src}
-          billedebeskrivelse="billede af ...."
-          afholder="CIRCULAR LAB"
-          dato="9 APRIL KL 14.00"
-        />
-      </div>
+      <button class="card_arrow right_arrow">
+        <img src={arrowright.src} alt="gå til højre" />
+      </button>
     </div>
-    <button class="card_arrow right_arrow"
-      ><img src={arrowright.src} alt="gå til højre" /></button
-    >
-  </div>
-</article> -->
+  </section>
+</article>
 
 <style>
   .section_events {
