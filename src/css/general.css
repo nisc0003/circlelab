@@ -91,7 +91,8 @@ li {
     font-size: 5rem;
   }
   h2 {
-    font-size: 4rem;
+    font-size: clamp(1rem, 5.5vw, 6rem);
+    white-space: nowrap;
   }
   h3 {
     font-size: 2rem;

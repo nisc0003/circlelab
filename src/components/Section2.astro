@@ -3,6 +3,10 @@ import left from "../images/arrow_left.svg";
 import right from "../images/arrow_right.svg";
 import up from "../images/arrow_up.svg";
 import down from "../images/arrow_down.svg";
+import illustration1 from "../images/circular_ikoner-01.svg";
+import illustration2 from "../images/circular_ikoner-02.svg";
+import illustration3 from "../images/circular_ikoner-03.svg";
+import illustration4 from "../images/circular_ikoner-04.svg";
 ---
 
 <article>
@@ -13,136 +17,212 @@ import down from "../images/arrow_down.svg";
         <h5>Filosofien bag konceptet</h5>
       </div>
       <div class="box produktion">
-        <h3>Produktion Af Produkter</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
-        <!-- cta -->
+        <div class="box_img">
+          <img
+            src={illustration1.src}
+            alt="illustration"
+            class="illustration"
+          />
+        </div>
+        <div class="box_text">
+          <h3>Produktion Af Produkter</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </div>
       </div>
       <img src={right.src} alt="pil til højre" class="arrow_right" />
       <div class="box salg">
-        <h3>Salg Og Marketing</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
+        <div class="box_img">
+          <img
+            src={illustration2.src}
+            alt="illustration"
+            class="illustration"
+          />
+        </div>
+        <div class="box_text">
+          <h3>Salg Og Marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </div>
       </div>
       <img src={down.src} alt="pil der peger ned" class="arrow_down" />
       <div class="box forbrug">
-        <h3>Forbrug Og Slid Af Materialerne</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
+        <div class="box_img">
+          <img
+            src={illustration3.src}
+            alt="illustration"
+            class="illustration"
+          />
+        </div>
+        <div class="box_text">
+          <h3>Forbrug Og Slid Af Materialerne</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </div>
       </div>
       <img src={left.src} alt="pil til venstres" class="arrow_left" />
       <div class="box materialer">
-        <h3>Materialerne Genanvendes</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
-        </p>
+        <div class="box_img">
+          <img
+            src={illustration4.src}
+            alt="illustration"
+            class="illustration"
+          />
+        </div>
+        <div class="box_text">
+          <h3>Materialerne Genanvendes</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </div>
       </div>
       <img src={up.src} alt="pil der peger op" class="arrow_up" />
     </div>
   </section>
+
+  <style>
+    .section_connection {
+      padding-right: 60px;
+      padding-left: 60px;
+      background: var(--section2);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto auto auto;
+      padding: 40px;
+      justify-items: center;
+      place-items: center;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .produktion {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+    .arrow_right {
+      grid-column: 4;
+      grid-row: 1;
+      width: 5vw;
+      margin: 30px;
+    }
+    .salg {
+      grid-column: 5 / span 2;
+      grid-row: 1 / span 2;
+      align-content: start;
+    }
+    .arrow_down {
+      grid-column: 5 / span 2;
+      grid-row: 3;
+      height: 5vw;
+      margin: 30px;
+    }
+
+    .materialer {
+      grid-column: 4 / span 3;
+      grid-row: 4;
+      text-align: start;
+      align-content: start;
+    }
+    .arrow_left {
+      grid-column: 3;
+      grid-row: 4;
+      width: 5vw;
+      margin: 30px;
+    }
+
+    .forbrug {
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 2;
+      align-content: start;
+    }
+
+    .arrow_up {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+      height: 5vw;
+      margin: 30px;
+    }
+
+    .center {
+      grid-column: 3 / span 2;
+      grid-row: 2 / span 2;
+      align-self: center;
+      background: #3c8e76;
+      padding: 80px 20px;
+      border-radius: 50%;
+      align-content: center;
+      text-align: center;
+    }
+
+    .center h4 {
+      color: var(--txtcolor2);
+    }
+    h5 {
+      color: var(--txtcolor2);
+    }
+
+    .box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--tertiary);
+      border-radius: 53px;
+      width: 100%;
+      height: auto;
+      min-height: 200px;
+      overflow: hidden;
+    }
+    .box_img,
+    .box_text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .box_img img {
+      max-height: 100%;
+      width: auto;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .box_text {
+      display: none;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .box:hover .box_img {
+      display: none;
+    }
+
+    .box:hover .box_text {
+      display: flex;
+    }
+
+    /* Ensure text containers don't overflow */
+    .box_text p {
+      overflow: hidden;
+    }
+  </style>
 </article>
-<style>
-  .section_connection {
-    padding-right: 60px;
-    padding-left: 60px;
-    background: var(--section2);
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    /* column-gap: 200px;
-    row-gap: 100px; */
-    padding: 40px;
-    justify-items: center;
-    /* background: tbd */
-  }
-
-  .box {
-    padding: 20px;
-    background: var(--tertiary);
-    border-radius: 53px;
-    text-align: center;
-    text-wrap: balance;
-    /* height: 300px; */
-    place-content: center;
-  }
-
-  .produktion {
-    grid-column: 1 / span 3;
-    grid-row: 1;
-    text-align: start;
-    align-content: start;
-  }
-  .arrow_right {
-    grid-column: 4;
-    grid-row: 1;
-    width: 5vw;
-    margin: 30px;
-  }
-  .salg {
-    grid-column: 5 / span 2;
-    grid-row: 1 / span 2;
-    align-content: start;
-  }
-  .arrow_down {
-    grid-column: 5 / span 2;
-    grid-row: 3;
-    height: 5vw;
-    margin: 30px;
-  }
-
-  .materialer {
-    grid-column: 4 / span 3;
-    grid-row: 4;
-    text-align: start;
-    align-content: start;
-  }
-  .arrow_left {
-    grid-column: 3;
-    grid-row: 4;
-    width: 5vw;
-    margin: 30px;
-  }
-
-  .forbrug {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 2;
-    align-content: start;
-  }
-
-  .arrow_up {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    height: 5vw;
-    margin: 30px;
-  }
-
-  .center {
-    grid-column: 3 / span 2;
-    grid-row: 2 / span 2;
-    align-self: center;
-    background: #3c8e76;
-    padding: 80px 20px;
-    border-radius: 50%;
-    align-content: center;
-    text-align: center;
-  }
-
-  .center h4,
-  h5 {
-    color: var(--txtcolor2);
-  }
-</style>
