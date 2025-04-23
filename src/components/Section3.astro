@@ -1,5 +1,4 @@
 ---
-//@ts-nocheck
 import Eventcard from "../components/Card.astro";
 import arrowright from "../images/arrow_card_right.svg";
 import arrowleft from "../images/arrow_card_left.svg";
@@ -11,16 +10,11 @@ import "../css/card.css";
 const url = "https://svsblnghypojkwpyajnm.supabase.co/rest/v1/events";
 const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN2c2JsbmdoeXBvamt3cHlham5tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzNTMzNjgsImV4cCI6MjA1OTkyOTM2OH0.GjC9pG1mZOeGjvvrBiQOMZR1J9aKpJlSrSYNkjKafQQ";
+const options = { headers: { apikey: key } };
 
-const options = {
-  headers: { apikey: key },
-};
-const data = await fetch(url, options).then((res) => res.json());
-const images = [
-  "/src/images/event1.webp",
-  "/src/images/event2.webp",
-  "/src/images/event3.webp",
-];
+const data: any[] = await fetch(url, options).then((res) => res.json());
+
+const images = [img1.src, img2.src, img3.src];
 ---
 
 <article>
@@ -31,9 +25,10 @@ const images = [
       <button class="card_arrow left_arrow">
         <img src={arrowleft.src} alt="gå til venstre" />
       </button>
+
       <div class="cards_layout">
         {
-          data.map((event, index) => (
+          data.map((event: any, index: number) => (
             <div class="event_card">
               <Eventcard
                 event={event}
@@ -45,6 +40,7 @@ const images = [
           ))
         }
       </div>
+
       <button class="card_arrow right_arrow">
         <img src={arrowright.src} alt="gå til højre" />
       </button>

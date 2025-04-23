@@ -1,12 +1,38 @@
-.event_card {
+.cards_container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 12fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  margin: 50px;
+}
+
+.cards_layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  align-items: stretch;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  grid-column: 2;
+}
+
+.event_card {
+  display: flex;
+  flex-direction: column;
   width: calc((100% - 100px) / 3);
-  justify-content: center;
-  align-items: start;
+  flex: 0 0 calc((100% - 100px) / 3);
   flex: 0 0 auto;
   scroll-snap-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card_img_box {
@@ -37,25 +63,16 @@
 }
 
 .card_text_box {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 20px;
   background-color: var(--quinary);
   margin-right: 10px;
   margin-left: 10px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-}
-
-.cards_container {
-  display: grid;
-  grid-template-columns: 1fr 12fr 1fr;
-  grid-template-rows: 1fr;
-  margin: 0px;
-  padding: 0px;
-  position: relative;
-  margin: 50px;
 }
 
 .card_arrow {
@@ -81,15 +98,4 @@
 
 button {
   background: none;
-}
-.cards_layout {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 50px;
-  align-items: center;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  grid-column: 2;
 }

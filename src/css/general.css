@@ -77,14 +77,14 @@ li {
   cursor: pointer;
 }
 
-.flex {
+/* .flex {
   display: flex;
 }
 
 .flexcol {
   display: flex;
   flex-direction: column;
-}
+} */
 
 @media (min-width: 800px) {
   h1 {
