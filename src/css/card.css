@@ -99,3 +99,86 @@
 button {
   background: none;
 }
+
+@media (max-width: 1200px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    margin: 20px;
+  }
+
+  .cards_layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 40px;
+    align-items: stretch;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    grid-column: 2;
+  }
+
+  .card_text_box p {
+    font-size: 1rem;
+  }
+
+  .event_card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 80px) / 2);
+    flex: 0 0 calc((100% - 80px) / 2);
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    margin: 20px;
+  }
+
+  .cards_layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 60px;
+    align-items: stretch;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    grid-column: 2;
+  }
+
+  .event_card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 0 0 calc;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}

@@ -55,4 +55,37 @@ const images = [img1.src, img2.src, img3.src];
     background: var(--primary);
     padding-bottom: 100px;
   }
+
+  .section_events h3 {
+    font-size: 3.5rem;
+    color: var(--txtcolor2);
+    font-weight: normal;
+  }
+
+  .section_events h2 {
+    font-size: 6rem;
+    color: var(--secondary);
+  }
+  @media (max-width: 800px) {
+    .section_events {
+      padding-right: 10px;
+      padding-left: 10px;
+      background: var(--primary);
+      padding-bottom: 100px;
+    }
+    .section_events h3 {
+      font-size: clamp(1rem, 5.5vw, 6rem);
+
+      color: var(--txtcolor2);
+      font-weight: normal;
+    }
+
+    .section_events h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+    }
+    .card_text_box {
+      font-size: 1.25rem;
+    }
+  }
 </style>
